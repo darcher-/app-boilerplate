@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ESNext",
+    "module": "umd",
+    "lib": [
+      "ESNext",
+      "dom",
+      "dom.iterable"
+    ],
+    "jsx": "react",
+    "noEmit": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "paths": {
+      "Assets": [ "src/assets"],
+      "Components": [ "src/components"],
+      "Features": [ "src/features"],
+      "Pages": [ "src/pages"],
+      "Services": [ "src/services"],
+      "Resources": [ "src/resources"]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": false
+  },
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "display": "Node 16",
+  "include": ["src", "**/*.d.ts"]
+}

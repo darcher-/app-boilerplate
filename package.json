@@ -1,0 +1,198 @@
+{
+  "author": "darcher-",
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-env",
+        {
+          "corejs": 3,
+          "useBuiltIns": "usage"
+        }
+      ],
+      "@babel/preset-react",
+      "react-app"
+    ]
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "description": "A starter boilerplate for react/ts/babel/webpack/eslint/prettier",
+  "devDependencies": {
+    "@babel/core": "7.20.5",
+    "@babel/plugin-syntax-flow": "7.18.6",
+    "@babel/plugin-transform-react-jsx": "7.19.0",
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
+    "@tsconfig/node16": "1.0.3",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "babel-loader": "9.1.0",
+    "core-js": "3.26.1",
+    "css-loader": "6.7.3",
+    "eslint": "8.29.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-react-app": "7.0.1",
+    "prettier": "2.8.1",
+    "ramda": "0.28.0",
+    "regenerator-runtime": "0.13.11",
+    "sass": "1.56.2",
+    "sass-loader": "13.2.0",
+    "style-loader": "3.3.1",
+    "svg-inline-loader": "0.8.2",
+    "svg-url-loader": "8.0.0",
+    "typescript": "4.9.4",
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.1",
+    "webpack-dev-server": "4.11.1"
+  },
+  "engines": {
+    "node": ">= 16.15.0",
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.19"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "**/*.test.*",
+      "**/*.spec.*",
+      "**/*.config.*"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".jsx",
+            ".tsx"
+          ]
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+      "^Assets(.*)$": "<rootDir>/src/assets/$1",
+      "^Components(.*)$": "<rootDir>/src/components/$1",
+      "^Features(.*)$": "<rootDir>/src/features/$1",
+      "^Pages(.*)$": "<rootDir>/src/pages/$1",
+      "^react-native$": "react-native-web",
+      "^Resources(.*)$": "<rootDir>/src/resources/$1",
+      "^Services(.*)$": "<rootDir>/src/services/$1"
+    },
+    "modulePaths": [
+      ".",
+      "src",
+      "node_modules"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/resources/setup/tests.ts"
+    ],
+    "testEnvironment": "jest-environment-jsdom-fourteen",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  },
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "name": "figo-boilerplate",
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "private": true,
+  "repository": "https://github.com/darcher-/app-boilerplate.git",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --mode production --progress",
+    "format": "yarn run lint --fix & yarn run prettier",
+    "linter": "node_modules/.bin/eslint --ext .js,.ts,.jsx,.tsx src",
+    "prettier": "node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "start": "node_modules/.bin/webpack serve",
+    "tscheck": "node_modules/.bin/tsc"
+  },
+  "version": "1.0.0",
+  "webpack": {}
+}
