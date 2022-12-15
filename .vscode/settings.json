@@ -3,6 +3,30 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "svipas.prettier-plus"
 }
