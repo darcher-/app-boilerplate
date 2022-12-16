@@ -1,9 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from 'Components';
+import { logWebVitals } from 'Resources';
 
-const rootNode = document.getElementById('app');
+createRoot(document.body).render(
+  <React.StrictMode>
+    <main
+      role="main"
+      key="__approot"
+    >
+      <App />
+    </main>
+  </React.StrictMode>,
+);
 
-if (rootNode) {
-  createRoot(rootNode).render(<App />);
-}
+logWebVitals(console.info);

@@ -4,17 +4,17 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js',
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, './dist')
-    }
+      directory: path.resolve(__dirname, './dist'),
+    },
   },
   module: {
     rules: [
       {
-        test: /\.(js|ts)x?$/,
+        test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -23,7 +23,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'svg-inline-loader',
+          // 'svg-inline-loader',
           {
             loader: 'svg-url-loader',
             options: {
@@ -34,24 +34,20 @@ module.exports = {
       },
       {
         test: /\.(sa|c|sc|le)ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      'Resources': path.resolve(__dirname, './src/resources/'),
-      'Components': path.resolve(__dirname, './src/components/'),
-      'Pages': path.resolve(__dirname, './src/pages/'),
-      'Services': path.resolve(__dirname, './src/services/'),
-      'Features': path.resolve(__dirname, './src/features/'),
-      'Assets': path.resolve(__dirname, './src/assets/'),
-      'Templates': path.resolve(__dirname, './src/templates/'),
-    }
+      Resources: path.resolve(__dirname, './src/resources/'),
+      Components: path.resolve(__dirname, './src/components/'),
+      Pages: path.resolve(__dirname, './src/pages/'),
+      Services: path.resolve(__dirname, './src/services/'),
+      Features: path.resolve(__dirname, './src/features/'),
+      Assets: path.resolve(__dirname, './src/assets/'),
+      Templates: path.resolve(__dirname, './src/templates/'),
+    },
   },
-}
+};

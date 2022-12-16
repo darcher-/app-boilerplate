@@ -1,0 +1,10 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "proseWrap": "always",
+  "printWidth": 96,
+  "parser": "babel-ts",
+  "endOfLine": "crlf",
+  "arrowParens": "avoid"
+}
