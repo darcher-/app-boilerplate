@@ -193,6 +193,5 @@
     "start": "node_modules/.bin/webpack serve",
     "tscheck": "node_modules/.bin/tsc"
   },
-  "version": "1.0.0",
-  "webpack": {}
+  "version": "1.0.0"
 }
