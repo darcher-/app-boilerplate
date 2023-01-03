@@ -21,6 +21,7 @@
   },
   "description": "A starter boilerplate for react/ts/babel/webpack/eslint/prettier",
   "devDependencies": {
+    "@axe-core/react": "4.5.2",
     "@babel/core": "7.20.7",
     "@babel/plugin-syntax-flow": "7.18.6",
     "@babel/plugin-transform-react-jsx": "7.20.7",
@@ -52,7 +53,9 @@
     "regenerator-runtime": "0.13.11",
     "sass": "1.57.1",
     "sass-loader": "13.2.0",
+    "sonarlint": "1.1.0",
     "style-loader": "3.3.1",
+    "stylelint": "14.16.1",
     "svg-inline-loader": "0.8.2",
     "svg-url-loader": "8.0.0",
     "typescript": "4.9.4",
