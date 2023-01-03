@@ -26,8 +26,8 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
+    // project: 'tsconfig.json',
+    // tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint', 'babel', 'prettier', 'react', 'unicorn'],
   //   rules: {
