@@ -29,7 +29,7 @@ module.exports = {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint', 'babel', 'prettier', 'react', 'unicorn'],
+  plugins: ['@typescript-eslint', 'babel'],
   //   rules: {
   //     'import/extensions': [
   //       'error',
